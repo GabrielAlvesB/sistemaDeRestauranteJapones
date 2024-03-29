@@ -13,7 +13,7 @@ const initialState: States = {
     cart: []
 }
 
-export const useCartStore = create<States && Actions>()(set => ({
+export const useCartStore = create<States & Actions>()(set => ({
     ...initialState,
     upsertCartItem: (product, quantity) => set(state =>{
         let newCart = state.cart;
